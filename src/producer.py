@@ -7,19 +7,17 @@
 #
 # Original Confluent sample modified for use with Azure Event Hubs for Apache Kafka Ecosystems
 
-
-
-from confluent_kafka import Producer
 import sys, os
+
 from dotenv import load_dotenv
 load_dotenv()
+
+from confluent_kafka import Producer
 
 if os.getenv('SERVICE_BUS_CONNECTION_STRING') == None:
     print('bad env variable')
     exit(1)
-else:
-    print(os.getenv('SERVICE_BUS_CONNECTION_STRING'))
-    
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         sys.stderr.write('Usage: %s <topic>\n' % sys.argv[0])
