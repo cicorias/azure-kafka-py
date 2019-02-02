@@ -1,0 +1,3 @@
+[submodule "gmod/librdkafka"]
+	path = gmod/librdkafka
+	url = git@github.com:edenhill/librdkafka.git
